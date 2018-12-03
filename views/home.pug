@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  h1 M8 T2
+  //- - var img = "img/test.jpg"
+  //- img(src=img)
+  img(src=qrImageData, alt="")
+  hr
+  p.lead Por favor escanee el código QR, e introduzca el código proporcionado.
+  hr
+
+  form.form-horizontal(method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group
+      label.col-sm-1.control-label(for='email') Código
+      .col-sm-11
+        input.form-control(type='text', name='otp', id='otp', placeholder='', autofocus, required)
+    .form-group
+      .col-sm-offset-1.col-sm-11
+        button.col-sm-3.btn.btn-primary(type='submit')
+          i.fa.fa-user
+          | Verificar código
+
+          
+  //- .row
+  //-   .col-sm-6
+  //-     h2 Heading
+  //-     p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  //-     p
+  //-       a.btn.btn-default(href='#', role='button') View details »
+  //-   .col-sm-6
+  //-     h2 Heading
+  //-     p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  //-     p
+  //-       a.btn.btn-default(href='#', role='button') View details »
+  //-   .col-sm-6
+  //-     h2 Heading
+  //-     p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  //-     p
+  //-       a.btn.btn-default(href='#', role='button') View details »
+  //-   .col-sm-6
+  //-     h2 Heading
+  //-     p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  //-     p
+  //-       a.btn.btn-default(href='#', role='button') View details »
